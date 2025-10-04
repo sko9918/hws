@@ -1,21 +1,24 @@
 var config = {
-  core_asset: "ABC",
-  address_prefix: "CBA",
+  core_asset: "HBW",
+  address_prefix: "HBW",
+  // 交易过期时间
   expire_in_secs: 15,
+  // 提案过期时间
   expire_in_secs_proposal: 24 * 60 * 60,
+  // 理事会提案审核周期
   review_in_secs_committee: 24 * 60 * 60,
   networks: {
     BitShares: {
-      core_asset: "BTS",
-      address_prefix: "BTS",
+      core_asset: "HBW",
+      address_prefix: "HBW",
       chain_id:
-        "4018d7844c78f6a6c41c6a552b898022310fc5dec06da467ee7905a8dad512c8"
+        "d8ee83d8ca641c9bb06d0e1fe09f170fdced44ab55798b41c90f2d47116986d4"
     },
     Test: {
-      core_asset: "TEST",
-      address_prefix: "TEST",
+      core_asset: "HBW",
+      address_prefix: "HBW",
       chain_id:
-        "39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447"
+        "d43509b1ea4a0ff8e44e0be000eabd98e43c24d80a2480ced1c155e4fa1adfe2"
     },
   },
 
@@ -39,15 +42,15 @@ var config = {
   },
 
   reset: () => {
-    config.core_asset = "ABC";
-    config.address_prefix = "CBA";
+    config.core_asset = "HBW";
+    config.address_prefix = "HBW";
     config.expire_in_secs = 15;
     config.expire_in_secs_proposal = 24 * 60 * 60;
 
     console.log("Chain config reset");
   },
 
-  setPrefix: (prefix = "CBA") => (config.address_prefix = prefix)
+  setPrefix: (prefix = "HBW") => (config.address_prefix = prefix)
 };
 
 export default config;
